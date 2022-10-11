@@ -1,0 +1,25 @@
+.content-status-filter{
+    margin-top: 1rem;
+
+    button{
+        color: #2271b1;
+        padding: 0px 10px;
+        border: 0;
+        cursor: pointer;
+        
+        &:not(:last-child) {
+            border-right: 1px solid #646970;
+        }
+
+        &.active{
+            color: #000;
+            font-weight: bold;
+        }
+    }
+}
+
+.row-actions > a {
+    &.caution{
+        color: #b32d2e;
+    }
+}

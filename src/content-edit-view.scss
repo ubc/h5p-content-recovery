@@ -1,0 +1,21 @@
+#major-publishing-actions{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    > div {
+        .action-button{
+            background: rgb(34, 113, 177);
+            color: rgb(255, 255, 255);
+            border: 0px;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 8px 12px;
+            margin-right: 5px;
+
+            &.caution{
+                background: #b32d2e !important;
+            }
+        }
+ }
+}
