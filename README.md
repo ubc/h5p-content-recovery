@@ -17,6 +17,9 @@ Install phpcs with WordPress coding standard
 
 ## Change Log
 
+### 1.0.2
+- Blocked embed access if the current H5P content is trashed.
+
 ### 1.0.1
 - Updated readme and changelog.
 

@@ -3,7 +3,7 @@
  * Plugin Name:       UBC H5P addon - Content Recovery
  * Plugin URI:
  * Description:       Allow H5P content to have the same trash system as WordPress posts have.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Kelvin Xu
  * Author URI:         https://ctlt.ubc.ca/
  * License:           GPL-2.0+

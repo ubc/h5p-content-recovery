@@ -27,8 +27,8 @@ class ContentRecovery {
 		add_filter( 'h5p_content_taxonomy_context_query', array( $this, 'query_data_context_query' ), 10, 2 );
 
 		add_filter( 'h5p_add_field_to_query_response', array( $this, 'add_additional_field_to_query_response' ) );
+		add_filter( 'h5p_embed_access', array( $this, 'can_h5p_content_embed' ), 10, 2 );
 	}
-
 	/**
 	 * Load assets for h5p new content page.
 	 *
@@ -188,6 +188,22 @@ class ContentRecovery {
 
 		array_push( $fields, 'trashed' );
 		return $fields;
+	}
+
+	/**
+	 * Block embed if the H5P content is trashed.
+	 *
+	 * @param Bool $embed_allowed Is embed enabled gloablly.
+	 * @param Int  $id Id of the current embeded H5P content.
+	 *
+	 * @return Bool False if the content is trashed, true if the content is not trashed.
+	 */
+	public function can_h5p_content_embed( $embed_allowed, $id ) {
+		if ( ! $embed_allowed ) {
+			return $embed_allowed;
+		}
+
+		return ! ContentRecoveryDB::is_trashed( $id );
 	}
 
 }
